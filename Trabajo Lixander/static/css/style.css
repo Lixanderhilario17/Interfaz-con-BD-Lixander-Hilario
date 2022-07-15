@@ -1,0 +1,52 @@
+body{
+    background: url(/static/img/Fondo\ de\ pantalla.jpg);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position-y: -135px;
+}
+
+.principal{
+    color: black;
+    background: white;
+    opacity: 85%;
+    padding: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    width: 400px;
+    height: 610px;
+    margin: auto;
+    margin-top: 5%;
+}
+
+img{
+    width: 105px;
+    height: 70px; 
+    margin-left: 155px;
+    opacity: 100%;
+}
+
+h2{
+    text-align: center;
+    color: #1415A7;
+    font-size: 25px
+}
+
+.principal .contenedor input{
+    width: 100%;
+    padding: 10px 0;
+    color: black;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+}
+
+.principal .contenedor input[type="submit"]{
+    background-color: #1415A7;
+    color: white;
+    opacity: 200%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: double;
+}

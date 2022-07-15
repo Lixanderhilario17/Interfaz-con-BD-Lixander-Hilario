@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Interfaz Gráfica</title>
+</head>
+<body>
+
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+
+                {% for category, message in messages %}
+
+                <div class="alert alert-{{ category }}" role="alert">
+                    {{message}}
+                </div>
+
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+</div>
+
+    <div class="principal">
+        <img src="/static/img/logo.png">
+        <h2>  CREAR USUARIO </h2>
+        <form id="logo" name="logo" action="/login/registrarse" method="post">
+        </br>
+            <div class="contenedor">
+                <label for="fname"> Ingrese su usuario a utilizar: </label><br>
+                <input type="text" id="fname" name="usuario">
+            </div>
+            <div class="contenedor">
+                <label for="fname"> Ingrese su correo a utilizar: </label><br>
+                <input type="text" id="fname" name="correo">
+            </div>
+            <div class="contenedor">
+                <label for="lname"> Ingrese contraseña a utilizar: </label><br>
+                <input type="text" id="lname" name="contraseña"><br>
+                <a href="{{ url_for('Home') }}"> Iniciar Sesion </a>
+            </div>
+        </br>
+            <div class="contenedor">
+                <input type="submit" value="Crear">
+            </div>
+
+        </form>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
